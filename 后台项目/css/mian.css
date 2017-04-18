@@ -1,0 +1,45 @@
+body,html{
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    color: #5d5d5d;
+}
+.l-content{
+    width: 90%;
+    height: 40%;
+    margin: 20px 20px;
+    /*margin-bottom: 5px;*/
+    border: 1px solid rgba(236, 236, 236, 0.51);
+    border-radius: 3px;
+    background: #e9f4f9;
+    overflow: hidden;
+}
+.l-content:last-child{
+    margin-top: 100px;
+}
+h3{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.shi,.time,.person{
+    margin-top: 0;
+    margin-bottom: 40px;
+    float: left;
+    list-style: none;
+    margin-left: 3%;
+}
+.time{
+    margin-left: 30%;
+}
+li{
+    padding: 5px 0;
+}
+.shi > li{
+
+    width: 20em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+td{
+    padding: 5px 0;
+}

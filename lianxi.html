@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <script src="jquery-3.1.0.min.js"></script>
+    <style>
+        .has-error{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<form action="xxx.php">
+    <p><label for="yhm">用户名</label><input type="text" id="yhm"/></p>
+    <p><label for="mm">密码</label><input type="password" id="mm"/></p>
+    <p><label for="">性别</label><input type="radio" name="xingbie" id="nan"/>男 <input type="radio" name="xingbie" id="nv"/>女</p>
+    <p><label for="aihao">爱好</label>
+        <input type="checkbox"/>吃
+        <input type="checkbox"/>
+        <input type="checkbox"/>吃
+    </p>
+    <input type="submit"/>
+</form>
+
+
+<script>
+    $(document).ready(function(){
+        $('form').eq(0).submit(function(){
+            var $yhm = $('#yhm');
+            var yhmreg = /^([A-z]|[0-9]){6,20}$/ig;
+            if(!yhmreg.test($yhm.val())){
+                $yhm.parent().addClass('has-error');
+//                alert('qqqq');
+            }
+            return false;
+        });
+
+    });
+
+</script>
+</body>
+</html>

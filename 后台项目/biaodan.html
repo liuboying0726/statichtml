@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!--<link rel="stylesheet" href="css/homecss.css"/>-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        body {
+            font-family: "微软雅黑";
+            font-size: 14px;
+        }
+        .clearfixed:after{
+            display: block;
+            clear: both;
+            content: "";
+        }
+        .container{
+            border: 1px solid #0f0f0f;
+            width: 40%;
+            margin: 0 auto;
+        }
+        p{
+            margin: 10px;
+        }
+        legend{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        /*#biaodan {*/
+            /*margin: 0 auto;*/
+            /*border: 1px solid #ccc;*/
+            /*width: 50%;*/
+            /*height: 60%;*/
+            /*margin-top: 60px;*/
+        /*}*/
+        /*.biaodan .form {*/
+            /*margin: 0 auto;*/
+            /*text-align: center;*/
+        /*}*/
+        /*.biaodan .form > div{*/
+            /*margin-top: 15px;*/
+            /*margin-bottom: 15px;*/
+        /*}*/
+        /*.form .js .js-label{*/
+            /*float: left;*/
+        /*}*/
+        /*.form .js .js-sub {*/
+            /*float: left;*/
+            /*border:1px solid #ccc;*/
+            /*width: 35%;*/
+            /*height: 15%;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <form action="xxx.php">
+
+            <legend>新建用户</legend>
+            <p><label for="name">用户名：</label><input type="text" id="name"/></p>
+            <p><label for="hao">编号</label><input type="text" id="hao"/></p>
+            <p><label for="lianxi">联系方式：</label><input type="text" id="lianxi" placeholder="电话号码"/></p>
+            <p><label for="">性别：</label><input type="radio" name="xb"/>男<input type="radio" name="xb"/>女</p>
+            <p>
+                <label for="">角色</label>
+                <div>
+                    <span><input type="checkbox"/>角色1</span>
+                    <span><input type="checkbox"/>角色2</span>
+                    <span><input type="checkbox"/>角色1</span>
+                    <span><input type="checkbox"/>角色2</span>
+                    <span><input type="checkbox"/>角色1</span>
+                    <span><input type="checkbox"/>角色2</span>
+                    <span><input type="checkbox"/>角色1</span>
+                    <span><input type="checkbox"/>角色2</span>
+                </div>
+            </p>
+            <p>
+            <label for="bumen">部门：</label>
+            <select name="" id="bumen">
+                <option value="">-选择部门-</option>
+                <option value="zc">总裁</option>
+                <option value="yfbm">研发部门</option>
+                <option value="kfbm">开发部门</option>
+            </select>
+            </p>
+            <p><input type="button" value="提交"/></p>
+
+    </form>
+</div>
+</body>
+</html>

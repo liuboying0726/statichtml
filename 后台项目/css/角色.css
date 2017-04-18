@@ -1,0 +1,60 @@
+body{
+    font-family: "Microsoft YaHei";
+    /*color: #4d4d4d;*/
+    color: #333333;
+}
+.y-wrap{
+    width: 100%;
+
+}
+.y-left{
+    width: 20%;
+    float: left;
+    margin-right: 181px;
+    margin-left: 230px;
+    text-align:center;
+
+}
+.y-left h2 , .y-right h2{
+    color: #5d5d5d;
+
+    /*padding-left: 35px;*/
+}
+.y-right{
+    width: 20%;
+    float: left;
+    text-align:center;
+}
+.y-jueselist{
+    width: 184px;
+    border: 2px solid #bfbfbf;
+    height: 200px;
+    padding: 10px;
+    /*position: relative;*/
+}
+.y-shouquanlist{
+    border: 2px solid #bfbfbf;
+    width: 184px;
+    height: 200px;
+    padding: 10px;
+}
+li{
+    list-style: none;
+    padding-top: 10px;
+
+}
+li >input{
+    margin-right: 15px;
+}
+button{
+    position: absolute;
+    top: 170px;
+    left: 499px;
+    background: #93b4ff;
+    border: 1px solid #93b4ff ;
+    height: 32px;
+    line-height: 32px;
+    width: 87px;
+    color: #ffffff;
+    font-weight: 600;
+}

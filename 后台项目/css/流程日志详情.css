@@ -1,0 +1,41 @@
+.y-flowpicture{
+    width: 100%;
+    height: 180px;
+    font-size: 14px;
+    color:#333;
+    padding-top: 5%;
+}
+.y-flowrecord{
+    margin-top: 40px;
+    /*width: 100%;*/
+    /**/
+}
+.y-flowrecord h2{
+    text-align: center;
+}
+.y-flowrecord td{
+    height: 30px;
+}
+.liucheng{  position: relative;  margin: 3% auto;  }
+.grey{  background: #DCDCDC;  height: 15px;  width: 80%;  margin: 0 auto;  }
+.h_grey{  width: 30px;  height: 30px;  border-radius: 50%;  background: #DCDCDC;  }
+.grey1 {  position: absolute;  top:-10px;  left: 9%;  }
+.grey2 {  position: absolute;  top:-10px;  left: 35%;  }
+.grey3 {  position: absolute;  top:-10px;  left: 60%;  }
+.grey4 {  position: absolute;  top:-10px;  left: 88%;  }
+.blue{  background: #008542;  height: 5px;  width: 51%;  margin: 0 auto;  position: absolute;  top:5px;  left: 10%;  }
+.h_blue{  width: 20px;  height: 20px;  border-radius: 50%;  background: #008542;  }
+.blue1 {  position: absolute;  top:-4px;  left: 9.4%;  }
+.blue2 {  position: absolute;  top:-4px;  left: 35.4%;  }
+.blue3 {  position: absolute;  top:-4px;  left: 60.4%;  }
+/*.blue4 {  position: absolute;  top:-4px;  left: 88.4%;  }*/
+.liucheng span{  color: #fff;  font-size: 18px;  font-weight: 900;  }
+.grey_s {  position: absolute;  top:5px;  left: 30%;  }
+.blue_s {  position: absolute;  top:0;  left: 30%;  }
+.m_sz,.m_t{  font-weight: 900; color: #a9a9a9;}
+.m_s1{  margin-left: 8%; }
+.m_s2{  margin-left: 22%; }
+.m_s3{  margin-left: 21%; }
+.m_t1{   margin-left: 5%;}
+.m_t2{   margin-left: 14%;}
+.m_t3{   margin-left: 12%;}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报销</title>
+    <style>
+    h2{
+        margin-left: 260px;
+    }
+    .form{
+        margin-left: 100px;
+        float: left;
+    }
+    .form2{
+        margin-left: 100px;
+        float: left;
+        margin-top: 105px;
+    }
+    button{
+        width: 113px;
+        height: 30px;
+        border: none;
+        background: #93b4ff;
+        color:white;
+        font-weight: 600;
+        border-radius: 3px;
+        margin-left: 80px;
+    }
+    button:last-child{
+        margin-left: 10px;
+    }
+    textarea{
+        overflow: auto;
+        vertical-align: top;
+    }
+        input[type=text]{
+            width: 256px;
+            height: 25px;
+
+        }
+    input[type=date]{
+        width: 256px;
+        height: 25px;
+    }
+    input[type=radio]{
+        margin-right: 15px;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>报销申请</h2>
+
+    <form action="" class="form">
+        <p><label for="ren">申 请 人：</label><input type="text" id="ren"/></p>
+        <p><label for="bumen">部&nbsp;&nbsp;门：</label><input type="text" id="bumen"/></p>
+        <p><label for="time">申请时间：</label><input type="date" id="time"/></p>
+        <p><label for="fapiao">发票日期：</label><input type="date" id="fapiao"/></p>
+        <p><label for="">报销事由：</label><textarea name="" id="" cols="34" rows="5"></textarea></p>
+    </form>
+    <form action="" class="form2">
+        <h3>批示:</h3>
+        <p>
+            <label for="ty" class="">
+                <input type="radio" name="xb" id="ty"/>同意
+            </label>
+            <label for="bty" class="radio-inline">
+                <input type="radio" name="xb" id="bty"/>不同意
+            </label>
+        </p>
+        <p><label for="">批示建议：</label><textarea name="" id="" cols="34" rows="5"></textarea></p>
+        <p><button>提交</button><button>返回</button></p>
+    </form>
+</div>
+</body>
+</html>

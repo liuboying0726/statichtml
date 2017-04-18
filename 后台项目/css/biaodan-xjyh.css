@@ -1,0 +1,16 @@
+#biaodan {  font-family: "Microsoft YaHei";  font-size: 14px;  width: 100%;  height: 100%;  position: fixed;  top: 0;  left: 0;  z-index: 1;  margin: 0;  }
+.m-back {  width: 100%;  height: 100%;  position: fixed;  top: 0;  left: 0;  z-index: 2;    }
+.m-inner {  width: 30%;    position: relative;  top: 20%;  left: 30%;  z-index: 3;  background-color: #fff;  border: 1px solid rgba(126, 120, 119, 0.76);  border-radius: 4px;  }
+.m-biaodan h4 {  font-size: 16px;  font-weight: normal;  text-align: left;  color: #ffffff;  margin: 0;  padding: 10px 15px;    background-color: #55a9e1;  }
+/*.text h1:nth-child(even) {  background-color: #fff;  }*/
+.m-form{  overflow-y: hidden;  height: 100%; background-color: #fff;  }
+.m-form ul li {  list-style: none;  margin: 20px 0;  }
+.m-form ul li input[type=text],
+.m-form ul li select {  width: 55%;  margin-left: 40px;  }
+.m-form ul li #yhm {  margin-left: 24px;  }
+.m-form ul li #lxff {  margin-left: 10px;  }
+.m-form ul li #man {  margin-left: 40px;  }
+.m-form ul li input[type=submit] {  font-family: "Microsoft YaHei";  font-size: 14px;  width: 5em;  height: 2.5em;  background-color: #55a9e1; color: white;border-radius: 3px; text-align: center; border:none; }
+.m-form ul li .m-btn:first-child {  margin-left: 24%;  margin-right: 5%;  }
+.my-close { color: white; position: absolute;  top: 0;  right: 4%;  font-size: 2em;  cursor: pointer;  }
+.errorInfo {  border: 1px solid #d40000;  }

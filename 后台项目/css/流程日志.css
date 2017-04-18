@@ -1,0 +1,24 @@
+.y-chose form select{
+    width: 178px;
+    height: 30px;
+    line-height: 30px ;
+}
+.y-chose form button{
+    color: #ffffff;
+    background: #93b4ff;
+    border: 1px solid #93b4ff;
+    height: 30px;
+    line-height: 3px;
+    margin-left: -8px;
+    width: 67px;
+}
+.y-chose table{
+    margin-top: 40px;
+}
+.y-chose td{
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: #2b2b2b;
+}

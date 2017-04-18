@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>任务指派</title>
+    <style>
+        body{
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+        }
+        .xiala{
+            float: left;
+            margin: 20px;
+        }
+        .zhipai{
+            float: left;
+            margin: 20px;
+        }
+        .scoll{
+            border: 1px solid #c0c0c0;
+            width: 200px;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        table{
+            margin-left: 15px;
+        }
+        table td{
+            padding: 5px 0;
+        }
+        .shuoming{
+            float: left;
+            margin: 20px;
+        }
+        textarea{
+            overflow: auto;
+            vertical-align: top;
+        }
+        input[type=date]{
+            width: 256px;
+            height: 25px;
+        }
+        select{
+            width: 200px;
+            height: 25px;
+        }
+        .btn{
+            margin-left: 268px;
+        }
+        button{
+            width: 113px;
+            height: 30px;
+            border: none;
+            background: #93b4ff;
+            color:white;
+            font-weight: 600;
+            border-radius: 3px;
+            margin-left: 80px;
+        }
+        button:last-child{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div class="xiala">
+    <h3>部门名称:</h3>
+        <select name="renwu" id="renwu">
+            <option value="0">&nbsp;&nbsp;--&nbsp;请选择&nbsp;--</option>
+            <option value="1">总裁办</option>
+            <option value="2">秘书部</option>
+            <option value="3">研发部</option>
+            <option value="4">财务部</option>
+        </select>
+    </div>
+    <div class="zhipai">
+        <h3>请选择指派对象:</h3>
+        <div class="scoll">
+        <table>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+            <tr><td><input type="checkbox"/>指派对象</td></tr>
+        </table>
+        </div>
+
+    </div>
+    <div class="shuoming">
+        <h3>任务详情：</h3>
+        <p><label for="start">任务开始时间：</label><input type="date" id="start"/></p>
+        <p><label for="end">任务结束时间：</label><input type="date" id="end"/></p>
+        <p><label for="">任务详细说明：</label><textarea name="" id="" cols="34" rows="14"></textarea></p>
+    </div>
+    <div style="clear: both"></div>
+    <div class="btn">
+        <p><button>提交</button><button>返回</button></p>
+    </div>
+</div>
+</body>
+</html>

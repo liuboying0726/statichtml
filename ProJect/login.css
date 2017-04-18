@@ -1,0 +1,25 @@
+/***public style**/
+*{ padding: 0; margin: 0; list-style: none;}
+/***public style**/
+.login{ width: 500px; height: 300px; background: #777777; margin: 130px auto; border-radius: 5px;
+    box-shadow: #ccc 5px 5px}
+label{ color: #fff; font-weight: bold;}
+.ipt{ width: 200px; height: 20px;border-radius: 3px; margin-bottom: 10px;}
+.login-content{ padding-top: 100px; margin-left: 100px;}
+.submit .sub{ width: 100px; height: 30px; text-align: center; line-height: 20px;color: #fff;
+    background: #999999; border-radius: 5px;  margin-right: 120px; float: right; margin-top: 20px;}
+/*******************************login END************************************************/
+/*
+*login-index
+*/
+#td-nav{ position: relative;}
+.nav{  position: absolute; top: 20px; }
+.nav li .a1{ display:block;width: 150px; height: 30px;
+    background: #5f9ea0; margin-bottom: 5px; text-align: center; line-height: 30px;
+    color: #fff; font-weight: bold; text-decoration: none; border-radius: 3px;}
+.nav li ul{ margin-left: 30px; display: none;}
+.nav li ul li a{ display: block; width: 140px; height: 25px; border:1px solid #5f9ea0;
+text-align: center; line-height:25px; color: #000; text-decoration: none;border-radius: 3px;}
+
+
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>报销流程</title>
+    <style>
+        body,html {
+            font-family: "Microsoft YaHei";
+            font-size: 14px;
+            margin: 0 5px;
+            padding: 0;
+            color: #2b2b2b;
+
+        }
+        .container{
+            width: 100%;
+        }
+        .chaxunkuang{
+            text-align: left;
+            font-size: 16px;
+            color: #2b2b2b;
+        }
+        .container .leftm{
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        .container .bxje{
+            width: 10em;
+            height: 100px;
+            border: 1px solid #6d6d6d;
+            background:#fff;
+        }
+        .container div input[type="button"]{
+            /*margin-left: -5px;*/
+            margin-right: 10px;
+            background: #93b4ff;
+            color: #ffffff;
+            height: 30px;
+            border: 1px solid #93b4ff;
+            width: 8em;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .container div input[type="submit"]{
+            margin-right: 10px;
+            background: #93b4ff;
+            color: #ffffff;
+            height: 30px;
+            border: 1px solid #93b4ff;
+            width: 7em;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .chaxunkuang > input{
+            border: 1px solid #93b4ff;
+            height: 26px;
+            line-height: 20px;
+        }
+        .uselist {
+            width: 100%;
+
+        }
+        .uselist td{
+            height: 30px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/cssnormalize-min.css"/>
+</head>
+<body>
+<div class="container">
+    <h3>报销流程</h3>
+    <div class="chaxunkuang leftm">
+        <lable for="">报销人:</lable>
+        <input type="text" placeholder="姓名/部门"/>
+    </div>
+    <div class="chaxunkuang leftm">
+        <lable for="">明&nbsp;&nbsp;&nbsp;&nbsp;细:</lable>
+        <textarea class="bxje"></textarea>
+        <!--<input type="text" placeholder="报销金额/报销物品"/>-->
+    </div>
+    <div class="leftm">
+        <input type="button" value="选择流程审批人"/>
+        <input type="submit" value="提交"/>
+    </div>
+    <div class="uselist">
+        <table border="1" cellspacing="0" cellpadding="0" width="100%"
+               style="border-collapse: collapse;text-align: center;">
+            <tr>
+                <td>审批人：</td>
+                <td>建议</td>
+                <td>操作流程</td>
+                <td>操作时间</td>
+            </tr>
+            <tr>
+                <td>组长</td>
+                <td>同意</td>
+                <td>完成</td>
+                <td>操作时间</td>
+            </tr>
+            <tr>
+                <td>经理</td>
+                <td>等待操作</td>
+                <td>等待操作</td>
+                <td>操作时间</td>
+            </tr>
+            <tr>
+                <td>财务部</td>
+                <td>等待操作</td>
+                <td>等待操作</td>
+                <td>操作时间</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

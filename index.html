@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/cssnormalize-min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            $('#top-menu>ul>li').click(function(event){
+                $('#top-menu>ul>li').removeClass('selected')
+                $(this).addClass('selected');
+            });
+            //左侧导航
+            $('.class1').children('ul').hide();
+            $('.class1').children('h4').on('click.nav',function(){
+                $('.class1').children('ul').hide();
+                $(this).animate({
+                    background:'#fff'
+                },{
+                    speed:2000
+                }).next('ul').slideDown('slow');
+            });
+            $('.class1').children('h4').eq(0).trigger('click.nav');
+            $('.class1 > ul > li').click(function(){
+                $('.class1 > ul > li').removeClass('selected');
+                $(this).addClass('selected');
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div id="header-bg">
+            <div class="img-container"><img src="img/logo.png"/></div>
+            <h1  class="left" >社区网格化管理系统</h1>
+        </div>
+        <div id="top-menu">
+            <ul>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单一四</a>
+                </li>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单二</a>
+                </li>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单三</a>
+                </li>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单四</a>
+                </li>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单五</a>
+                </li>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单六</a>
+                </li>
+                <li>
+                    <a href="#" onfocus="if(this.blur) this.blur()">菜单七</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div id="content">
+        <nav>
+            <ul>
+                <li class="class1">
+                    <h4><a href="#">菜单一</a></h4>
+                    <ul>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                    </ul>
+                </li>
+                <li class="class1">
+                    <h4>菜单一</h4>
+                    <ul>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                    </ul>
+                </li>
+                <li class="class1">
+                    <h4>菜单一</h4>
+                    <ul>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                    </ul>
+                </li>
+                <li class="class1">
+                    <h4>菜单一</h4>
+                    <ul>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                        <li>子菜单</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <iframe frameborder="0" width="100%" height="100%" src="table.html" scrolling="no"></iframe>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+/* CSS Document */
+*{margin:0px;padding:0px;}
+.thr{
+    display: none;
+}
+#san{
+    font-size: 12px;
+}
+.thr{background:rgb(150,150,150);display:none;}
+html,body{height:100%;}
+li{list-style-type:none;}
+img{border:0px;vertical-align:middle;}
+a{text-decoration:none;outline:none;blr:expression(this.onFocus=this.blur());}
+.clear{clear:both;}
+.ce{display:block;width:200px;;position:absolute;z-index:5;top:0px;left:0px;}
+.ce li{border-bottom: 1px solid rgba(96, 96, 96, 0.48);
+    /*border-radius: 22px;*/background: rgba(113, 113, 113, 0.31);
+    /*border-top: 2px solid #FFAC33;*/
+    /*border-top-right-radius: 5px;*/
+    /*border-bottom-right-radius: 5px;*/
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+}
+.more{margin-left: 36px;}
+.ce li a{padding: 10px 10px 10px 40px;color:white;display:block;cursor:pointer;background:url(../images/more1.png) no-repeat 10px center;}
+.ce li a:hover{background:url(../images/more.png) no-repeat 10px center rgba(159, 220, 124, 0.63); }
+.ce li .dqian{background:none}
+.ce li .xz{background:url(../images/more.png) no-repeat 10px center rgb(142, 202, 107);}
+.xx{
+    background:url(../images/more1.png) no-repeat 10px center rgb(159, 220, 124);
+}
+.er{display:none;width:200px;
+    background: rgba(96, 96, 96, 0.26);border-radius: 10px;
+}
+.er li{margin-top: 3px;
+    width:100%;border:solid rgba(96, 96, 96, 0.29);border-radius: 10px;border-width:1px 0px 0px;}
+.er li a{display:block;padding:10px 10px 10px 43px;color:white;background:none;font-size: 15px;}
+.er li a:hover,.er li .sen_x{background: rgba(159, 220, 124, 0.63);border-radius: 10px;}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请假申请</title>
+</head>
+<style>
+    .container {
+        /*border: 1px solid #5d5d5d;*/
+        /*text-align: center;*/
+    }
+
+    h2 {
+       text-align: center;
+    }
+    .fudong{
+        float: left;
+        width: 40%;
+    }
+    form{
+        text-align: center;
+        /*width: 35%;*/
+        /*margin-left: 5%;*/
+/*float: left;*/
+        /*padding-left: 30px;*/
+    }
+    input{
+        width: 228px;
+      margin-left: 8px;
+        height: 30px;
+    }
+    button{
+        width: 113px;
+        height: 30px;
+        border: none;
+        background: #93b4ff;
+        color:white;
+        font-weight: 600;
+        border-radius: 3px;
+    }
+    textarea{
+        overflow: auto;
+        vertical-align: top;
+    }
+    table{
+margin-left: 150px;
+        text-align: center;
+border-collapse: collapse;
+    }
+    .sp{
+        margin-top: -20px;
+    }
+    .all{
+        width: 100%;
+        height: 300px;
+    }
+    .yj{
+       padding-top: 54px;
+    }
+    .b1{
+        margin-left: 81px;
+    }
+</style>
+<body>
+<div class="container">
+    <h2>请 假 申 请</h2>
+
+    <form action="" >
+        <div class="all">
+        <div class="fudong">
+        <p><label for="name">申请 人：</label><input type="text" id="name"/></p>
+
+        <p><label for="shiyou">申请事由：</label><textarea name="shiyou" id="shiyou" cols="30" rows="10"></textarea></p>
+
+        <p>
+            <button class="b1">提交</button>
+            <button>返回</button>
+        </p>
+        </div>
+<div class="fudong yj">
+        <p><label for="yijian" class="sp">审评意见：</label>           <textarea name="shiyou" id="yijian" cols="30" rows="10" disabled>..........</textarea>
+        </p>
+</div>
+        </div>
+        <table border="1">
+            <tr>
+                <td width="100px" height="30px">序号</td>
+                <td width="100px">环节</td>
+                <td width="100px">处理人</td>
+                <td width="500px">意见</td>
+
+            </tr>
+            <tr>
+                <td height="30px"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td height="30px"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css">
+    <style>
+        #tree{ float: left;}
+        .div1{ border:2px solid #7e7877; width:400px; height: 500px; float: left;}
+        .div2{ width: 400px; border-bottom:1px solid #000; height: 30px;}
+        #sel{
+            height: 30px;
+            width: 100px;
+            padding-left: 10px;
+        }
+        #ipt{
+            height: 24px;
+            width: 160px;
+        }
+        #btn{
+            height: 30px;
+            width: 50px;
+            border: 0;
+            background: #93b4ff;
+            color: white;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.ztree.core.min.js"></script>
+    <script>
+        //pid -1 无父节点。
+        var datas =[{id:"0",name:"部门名称",pid:"-1",test:"abc"},
+                     {id:"1",name:"研发部门",pid:"0",test:"a1"},
+            {id:"2",name:"研发一部",pid:"1",test:"a11"},
+            {id:"3",name:"研发二部",pid:"1",test:"a12"},
+            {id:"4",name:"销售部门",pid:"0",test:"b1"},
+            {id:"5",name:"销售部门1",pid:"4",test:"b11"},
+            {id:"6",name:"销售部门2",pid:"4",test:"b12"}];
+        $(function(){
+           var setting={
+               //选择哪个数据源
+               data:{
+                   simpleData: {
+                       //是否打开树，id是什么，父id是什么 以及根id
+                       enable: true,
+                       idKey: "id",
+                       pIdKey: "pid",
+                       rootPId: -1
+                   }
+               },
+               //显示形式，是否双击，是否多行选中
+               view: {
+                   dblClickExpand: false,
+                   selectedMulti: false
+               },
+               //回调
+               callback: {
+                   onClick: function(event,treeId,treeNode){
+                       //可以通过treeNode来拿到他的名称
+                        //alert(treeNode.name);
+                       $(".div1 .div2").html(treeNode.name);
+                   }
+               }
+
+                   }
+           //开始创建一个新节点
+            var t= $.fn.zTree.init($("#tree"), setting, datas);
+            function move(id,name,pid){
+                var n ={id:id,name:name,pid:pid};
+                t.addNodes(t.getNodeByParam("id",parseInt(pid),null),n);
+            }
+            move("7","销售部门5","4");
+            var sss= datas[datas.length-1].id;
+            $("#btn").click(function(){
+                sss++
+                var names=$("#ipt").val();
+                if($("#sel").val()=="研发部门"){
+                    move(sss+"",names,"1");
+                }
+                else if($("#sel").val()=="销售部门"){
+                    move(sss+"",names,"4");
+                }
+
+            });
+
+
+            //$(".div1").load("测试页.html");
+        })
+    </script>
+</head>
+<body>
+<div id="tree" class="ztree"></div>
+<div class="div1">
+    <div class="div2"></div>
+    <select id="sel">
+        <option>研发部门</option>
+        <option>销售部门</option>
+    </select><input type="text" value="" id="ipt" /><input type="button" value="保存" id="btn" >
+</div>
+</body>
+</html>

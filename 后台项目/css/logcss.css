@@ -1,0 +1,105 @@
+body{
+    margin: 0 auto;
+    padding: 0;
+    font: 12px/1.3  'sans-serif';
+    background: url("../logo/login.jpg") no-repeat;
+    background-size: 100%;
+    text-align: center;
+}
+.content{
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    margin-top: 250px;
+    margin-left: 600px;
+    padding-top: 20px;
+    border-radius: 5px;
+
+}
+input{outline: none}
+@font-face {
+    font-family: "aa";
+    src:url('../font/fontawesome-webfont.woff');
+}
+.content p input{
+    border: 2px solid #114c9c;
+    width: 150px;
+    height: 30px;
+    padding-left: 5px;
+
+
+}
+.name:after{
+    font-family: "aa";
+    content: "\f007";
+    color: white;
+    font-size: 18px;
+}
+.key:after{
+    font-family: "aa";
+    content: "\f023";
+    color: white;
+    font-size: 18px;
+}
+p span{
+    width: 30px;
+    height: 32px;
+    line-height: 29px;
+    border: 2px solid #114c9c;
+    display: inline-block;
+    background: #114c9c;
+}
+
+button{
+    width: 194px;
+    height: 35px;
+    background: #114c9c;
+
+    border: 2px solid #114c9c;
+}
+.j #jzmm{
+    font-size: 12px;width: 15px;height: 15px;
+    line-height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+
+}
+.j span{
+    width: 70px;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    padding-bottom: 5px;
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: #A9A9A9;
+}
+.j{
+    text-align: left;
+    padding-left: 49px;
+}
+.j a{
+    text-decoration: none;
+    color: #A9A9A9;
+    font-size: 14px;
+    padding-left: 47px;
+}
+.dl{
+    font-size: 20px;
+    color: #11386f;
+    font-weight: 600;
+    padding-bottom: 5px;
+
+
+}
+button{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+.logo{
+    position: relative;
+    top: 77px;
+}

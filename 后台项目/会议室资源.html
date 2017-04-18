@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会议室资源资源管理</title>
+    <style>
+        * { padding:0; margin:0;}
+        caption, th { text-align:left;}
+        table     { border-collapse:collapse; border-spacing:0;}
+        ol, ul    { list-style:none;}
+        a, button { cursor:pointer;}
+        html, body   { height:100%; width:100%;}
+        body   { font-family: "Microsoft YaHei"; font-size:14px;}
+        p      { margin:3px;}
+        img    { border:none;}
+        input, textarea   { font-size:12px;}
+        button{  width: 113px;  height: 30px;  border: none;  background: #93b4ff;  color:white;  font-weight: 600;  border-radius: 3px;  margin-left: 80px;  }
+        button:last-child{  margin-left: 10px;  }
+        .m_content tr { height:22px; line-height:22px;}
+        .m_content th{   padding: 2px 20px}
+        .m_content td { padding:2px;}
+        .m_cnt_t    { width:100%; border:1px solid #D0D0D0; background:#e9f4f9; margin-bottom:6px;}
+        .m_cnt_t tr { height:40px; line-height:40px;}
+        .m_cnt_t th { text-align:right; width:90px;}
+        .m_c_table      { background:#93b4ff; opacity: 0.6; width:100%;}
+        .m_c_table th, .m_c_table td   { background:#fff; border:1px solid #ccc; *border:none; height:22px; line-height:22px; padding:2px;}
+        *+html .m_c_table td  { border:none;}
+        .m_c_table th   { text-align:center; background:#f8fcfc;}
+        .m_content { padding:20px 20px 20px 14px;}
+    </style>
+    <script src="js/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+<div class="m_content">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="m_cnt_t">
+        <form id="form-search" name="form-search" action="" method="post">
+            <tr>
+                <th align="right"><h4>会议室选择：</h4></th>
+                <td><select name="select" id="select">
+                    <option value="">---请选择---</option>
+                    <option value="">101会议室</option>
+                    <option value="">102会议室</option>
+                    <option value="">103会议室</option>
+                    <option value="">104会议室</option>
+                </select></td>
+                <td align="right"><button>添加</button>&nbsp;&nbsp;&nbsp;<button>删除</button></td>
+            </tr>
+        </form>
+    </table>
+    <table border="0" align="center" cellpadding="0" cellspacing="1" class="m_c_table">
+
+        <tr>
+            <td width="5%" align="center">照相机</td>
+            <td width="5%" align="center">摄像机</td>
+            <td width="4%" align="center">录音笔</td>
+            <td width="6%" align="center">台式电脑</td>
+            <td width="7%" align="center">笔记本电脑</td>
+            <td width="4%" align="center">服务器</td>
+            <td width="4%" align="center">交换机</td>
+            <td width="4%" align="center">传真机</td>
+            <td width="4%" align="center">投影仪</td>
+            <td width="6%" align="center">复印机</td>
+        </tr>
+        <tr>
+            <td align="center">101会议室</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+        </tr>
+        <tr>
+            <td align="center">102会议室</td>
+            <td align="center">-</td>
+            <td align="center">1</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+            <td align="center">-</td>
+            <td align="center">1</td>
+            <td align="center">-</td>
+        </tr>
+
+    </table>
+    <!--//content pages wrap-->
+</body>
+</html>

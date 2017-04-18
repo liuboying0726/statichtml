@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建用户</title>
+    <link rel="stylesheet" href="cssnormalize-min.css"/>
+    <link rel="stylesheet" href="biaodan.css"/>
+    <script src="jquery-3.1.0.min.js"></script>
+    <style>
+        #biaodan {  font-family: "Microsoft YaHei";  font-size: 14px;  width: 100%;  height: 100%;  position: fixed;  top: 0;  left: 0;  z-index: 1;  margin: 0;  }
+        .m-back {  width: 100%;  height: 100%;  position: fixed;  top: 0;  left: 0;  z-index: 2;    }
+        .m-inner {  width: 30%;    position: relative;  top: 20%;  left: 30%;  z-index: 3;  background-color: #fff;  border: 1px solid #333;  border-radius: 4px;  }
+        .m-biaodan h4 {  font-size: 16px;  font-weight: normal;  text-align: left;  color: #333;  margin: 0;  padding: 10px 15px;  border-bottom: 1px solid #333;  background-color: #55a9e1;  }
+        /*.text h1:nth-child(even) {  background-color: #fff;  }*/
+        .m-form{  overflow-y: scroll;  height: 100%; background-color: #fff;  }
+        .m-form ul li {  list-style: none;  margin: 20px 0;  }
+        .m-form ul li input[type=text],
+        .m-form ul li select {  width: 55%;  margin-left: 40px;  }
+        .m-form ul li #yhm {  margin-left: 24px;  }
+        .m-form ul li #lxff {  margin-left: 10px;  }
+        .m-form ul li #man {  margin-left: 40px;  }
+        .m-form ul li input[type=submit] {  font-family: "Microsoft YaHei";  font-size: 14px;  width: 5em;  height: 2.5em;  background-color: #55a9e1;  text-align: center;  }
+        .m-form ul li .m-btn:first-child {  margin-left: 24%;  margin-right: 5%;  }
+        .my-close {  position: absolute;  top: 0;  right: 4%;  font-size: 2em;  cursor: pointer;  }
+        .errorInfo {  border: 1px solid #d40000;  }
+    </style>
+
+</head>
+<body>
+<div id="biaodan" class="biaodan">
+    <div class="m-back"></div>
+    <div class="m-inner" id="m-inner">
+        <div class="m-biaodan">
+            <h4>新建用户</h4>
+
+            <div class="m-form">
+                <ul>
+                    <li>
+
+                        <label for="" >用户名：</label>
+                        <input type="text" placeholder="请输入用户名" id="yhm"/>
+                        <span id="yhmError"></span>
+                    </li>
+                    <li>
+                        <label for="" class="m-label">性别：</label>
+                        <input type="radio" name="xb" id="man" value="1"/>男
+                        <input type="radio" name="xb" id="woman" value="2"/>女
+                        <span id="xbError"></span>
+
+                    </li>
+                    <li>
+                        <label for="" class="m-label">联系方式：</label>
+                        <input type="text" placeholder="电话号码" id="lxff"/>
+                        <span id="lxffError"></span>
+                    </li>
+                    <li>
+                        <label for="" class="m-js-label m-label">角色：</label>
+                        <select name="bumen" id="role">
+                            <option value="0">-选择角色-</option>
+                            <option value="zc">总裁</option>
+                            <option value="yfbm">研发部门</option>
+                            <option value="kfbm">开发部门</option>
+                        </select>
+                        <label id="roleError" class="m-label"></label>
+                    </li>
+                    <li>
+                        <label for="" class="m-label">编号：</label>
+                        <input type="text" placeholder="编号" id="bh"/>
+                    </li>
+                    <li>
+                        <label for="" class="m-label">部门：</label>
+                        <select name="bumen" id="department">
+                            <option value="0">-选择部门-</option>
+                            <option value="zc">总裁</option>
+                            <option value="yfbm">研发部门</option>
+                            <option value="kfbm">开发部门</option>
+                        </select>
+                        <label id="departmentError" class="m-label"></label>
+                    </li>
+                    <li>
+                        <input type="submit" id="submitBn" class="m-btn" value="保存">
+                        <input type="submit" id="concelBn" class="m-btn" value="返回">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-close" id="my-close">x</div>
+    </div>
+</div>
+<script>
+    $("#my-close").click(function () {
+        $("#biaodan").hide();
+    });
+    $("#submitBn").click(function () {
+        var yhm = $("#yhm").val();
+        var yhmreg = /^[a-z0-9_-]{3,16}$/gi;
+        var xb = $("input[name='xb']:checked").val();
+        var lxff = $("#lxff").val();
+//        var lxffreg = / ^[1][3578][0-9]{9}$/gi;
+        //var lxffreg = / ^[0-9]{11}$/gi;
+        var lxffreg =  /^1[3|4|5|8][0-9]\d{4,8}$/g;
+        var role = $("#role").val();
+        var bh = $("#bh").val();
+        var department = $("#department").val();
+        //用户名//写气泡
+        if (yhm == "") {
+            $("#yhm").addClass('errorInfo');
+            $("#yhmError").html("请填写").css("color","red");
+            return false;
+        } else if (!yhmreg.test(yhm)) {
+            $("#yhm").addClass('errorInfo');
+            $("#yhmError").html("请正确填写").css("color","red");
+            return false;
+        } else {
+            $("#yhm").removeAttr('class');
+            $("#yhmError").html("");
+        }
+//        性别
+        if (xb == undefined) {
+            $("#xb").addClass('errorInfo');
+            $("#xbError").html("请填写性别").css("color","red");
+            return false;
+        }else{
+            $("#xb").removeAttr('class');
+            $("#xbError").html("");
+        }
+        //联系方式
+        if(lxff==""){
+            $("#lxff").addClass('errorInfo');
+            $("#lxffError").html("请填写联系方法").css("color","red");
+            return false;
+        }else if(!lxffreg.test(lxff)){
+            $("#lxff").addClass('errorInfo');
+            $("#lxffError").html("请正确填写联系方法").css("color","red");
+            return false;
+        }else{
+            $("#lxff").removeAttr('class');
+            $("#lxffError").html("");
+        }
+        //角色
+        if (role == "") {
+            $("#role").addClass('errorInfo');
+            $("#roleError").html("请填写角色").css("color","red");
+        }else {
+            $("#role").removeAtt("class");
+            $("role").html("");
+        }
+        //编号
+        if (bh == "") {
+            $("#bh").addClass('errorInfo');
+            $("#bhError").html("请填写编号").css("color","red");
+        }
+        //部门
+        if (department == "") {
+            $("#department").addClass('errorInfo');
+            $("#departmentError").html("请填写部门").css("color","red");
+        }
+    });
+    $("#concelBn").click(function(){
+        $("#yhm").val("");
+        $("input[name='xb']").each(function(){
+            $(this).prop("checked",0);
+        });
+        $("#lxff").val("");
+        $("#role").val(0);
+        $("#bh").val("");
+         $("#department").val(0);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css"/>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.all.min.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.core.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.excheck.js"></script>
+    <script type="text/javascript" src="js/jquery.ztree.exedit.js"></script>
+    <style>
+        #btn{
+            float: left;
+            font-size: 20px;
+            margin-top: 180px;
+            margin-left: 100px;
+            width: 113px;
+            height: 30px;
+            border: none;
+            background: #93b4ff;
+            color:white;
+            font-weight: 600;
+            border-radius: 3px;
+            position: relative;
+        }
+        #qx{
+            float: left;
+            width: 150px;
+            height: 30px;    margin-top: 180px;
+            font-size: 20px;
+
+
+            border-radius: 3px;
+
+        }
+        .ul{
+
+            width: 200px!important;
+            position: relative;
+            float: left;
+            margin-left: 100px;
+
+
+            padding: 10px 30px;
+            padding-left: 20px;
+            border: 1px solid #A9A9A9;
+            background: #ffffff;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+
+<select name="qx" id="qx">
+    <option value="0">&nbsp;&nbsp;--&nbsp;请选择&nbsp;--</option>
+    <option value="1">管理员</option>
+    <option value="1">普通用户</option>
+    <option value="1">操作员</option>
+    <option value="1">游客</option>
+</select>
+
+
+<ul id="tree" class="ztree ul"></ul>
+<input id="btn" type="submit"/>
+
+
+<script type="text/javascript">
+    var zTree;
+    var setting = {
+        view:{
+            selectedMulti:false
+        },
+        data: {
+            /* keep:{
+             parent:true,
+             leaf:true
+             }, */
+            simpleData: {
+                enable: true
+            }
+        },
+        check: {
+            enable: true
+        },
+        callback:{
+            beforeDrag:beforeDrag,//用户禁止拖动节点
+            rightClick: zTreeOnRightClick,
+            onCheck: onCheck
+
+        }
+    };
+    var zNodes =[
+        { id:1, pId:0, name:"系统维护", open:true},
+        { id:11, pId:1, name:"菜单管理"},
+        { id:12, pId:1, name:"人员管理"},
+        { id:13, pId:1, name:"组织机构管理"},
+        { id:14, pId:1, name:"角色管理"},
+        { id:15, pId:1, name:"角色配置"},
+        { id:16, pId:1, name:"权限管理"},
+        { id:17, pId:1, name:"权限配置"},
+        { id:18, pId:1, name:"授权管理"},
+        { id:19, pId:1, name:"流程日志"},
+        { id:2, pId:0, name:"业务办公", open:true},
+        { id:21, pId:2, name:"任务指派"},
+        { id:22, pId:2, name:"日程安排"},
+        { id:23, pId:2, name:"会议管理"},
+        { id:24, pId:2, name:"会议室资源管理"},
+        { id:3, pId:0, name:"个人事项 ", open:true},
+        { id:31, pId:3, name:"请假申请"},
+        { id:32, pId:3, name:"加班申请"},
+        { id:33, pId:3, name:"报销申请"}
+    ];
+    $(document).ready(function(){
+        zTree = $.fn.zTree.init($("#tree"), setting, zNodes);
+    });
+    function beforeDrag(treeId,treeNodes){
+        return false;
+    }
+    function zTreeOnRightClick(event, treeId, treeNode) {
+        if (treeNode)
+            alert(treeNode.tId + ", " + treeNode.name);
+        else
+            alert("is root");
+    }
+    //勾选checkbox，获取对应的id
+    function onCheck(e, treeId, treeNode) {
+        console.log( treeNode.id );
+
+    }
+</script>
+</body>
+</html>

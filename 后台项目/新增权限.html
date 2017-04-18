@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/cssnormalize-min.css"/>
+    <!--<link rel="stylesheet" href="css/biaodan-xjyh.css"/>-->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <style>
+        #biaodan {  font-family: "Microsoft YaHei";  font-size: 14px;  width: 100%;  height: 100%;  position: fixed;  top: 0;  left: 0;  z-index: 1;  margin: 0;  }
+        .m-back {  width: 100%;  height: 100%;  position: fixed;  top: 0;  left: 0;  z-index: 2;    }
+        .m-inner {  width: 30%;    position: relative;  top: 20%;  left: 30%;  z-index: 3;  background-color: #fff;  border: 1px solid #333;  border-radius: 4px;  }
+        .m-biaodan h4 {  font-size: 16px;  font-weight: normal;  text-align: left;  color: #333;  margin: 0;  padding: 10px 15px;  border-bottom: 1px solid #333;  background-color: #55a9e1;  }
+        /*.text h1:nth-child(even) {  background-color: #fff;  }*/
+        .m-form{  overflow-y: scroll;  height: 100%; background-color: #fff;  }
+        .m-form ul li {  list-style: none;  margin: 20px 0;  }
+        .m-form ul li input[type=text],textarea,
+        .m-form ul li select {  width: 55%;  margin-left: 40px;  }
+        .m-form ul li #yhm {  margin-left: 24px;  }
+        .m-form ul li #lxff {  margin-left: 10px;  }
+        .m-form ul li #man {  margin-left: 40px;  }
+        .m-form ul li input[type=submit] {  font-family: "Microsoft YaHei";  font-size: 14px;  width: 5em;  height: 2.5em;  background-color: #55a9e1;  text-align: center;  }
+        .m-form ul li .m-btn:first-child {  margin-left: 24%;  margin-right: 5%;  }
+        .my-close {  position: absolute;  top: 0;  right: 4%;  font-size: 2em;  cursor: pointer;  }
+        .errorInfo {  border: 1px solid #d40000;  }
+    </style>
+</head>
+<body>
+<div id="biaodan" class="biaodan">
+    <div class="m-back"></div>
+    <div class="m-inner" id="m-inner">
+        <div class="m-biaodan">
+            <h4>新建权限</h4>
+
+            <div class="m-form">
+                <ul>
+                    <li>
+
+                        <label for="" >权&nbsp;&nbsp;&nbsp;限ID：</label>
+                        <input type="text"/>
+                    </li>
+                    <li>
+
+                        <label for="" >权限名称：</label>
+                        <input type="text"/>
+                    </li>
+
+                    <li>
+                        <label for="" class="m-label">权限描述：</label>
+                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                    </li>
+
+                    <li>
+                        <input type="submit" id="submitBn" class="m-btn" value="保存">
+                        <input type="submit" id="concelBn" class="m-btn" value="返回">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-close" id="my-close">x</div>
+    </div>
+</div>
+</body>
+</html>

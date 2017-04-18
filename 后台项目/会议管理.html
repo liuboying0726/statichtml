@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会议管理</title>
+    <style>
+        h2{
+            margin-left: 260px;
+        }
+        .form{
+            margin-left: 100px;
+            float: left;
+        }
+        .form2{
+            margin-left: 100px;
+            float: left;
+            margin-top: 200px;
+        }
+        button{
+            width: 113px;
+            height: 30px;
+            border: none;
+            background: #93b4ff;
+            color:white;
+            font-weight: 600;
+            border-radius: 3px;
+            margin-left: 80px;
+        }
+        button:last-child{
+            margin-left: 10px;
+        }
+        textarea{
+            overflow: auto;
+            vertical-align: top;
+        }
+        input[type=text]{
+            width: 256px;
+            height: 25px;
+
+        }
+        input[type=date]{
+            width: 256px;
+            height: 25px;
+        }
+        input[type=radio]{
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+<h2>会议申请</h2>
+
+<form action="" class="form">
+    <p><label for="office">主办单位：</label><input type="text" id="office"/></p>
+    <p><label for="huiyi">会议名称：</label><input type="text" id="huiyi"/></p>
+    <p><label for="time">会议时间：</label><input type="date" id="time"/></p>
+    <p><label for="riqi">申请日期：</label><input type="date" id="riqi"/></p>
+    <p><label for="ren">申 请 人：</label><input type="text" id="ren"/></p>
+    <p><label for="lingdao">领导签字：</label><input type="text" id="lingdao"/></p>
+    <p><label for="shuoming">情况说明：</label><textarea name="" id="shuoming" cols="34" rows="5"></textarea></p>
+    <p><label for="fujian">附件：&nbsp;&nbsp;</label><input type="file" id="fujian"/></p>
+</form>
+<form action="" class="form2">
+    <h3>批示:</h3>
+    <p>
+        <label for="ty" class="">
+            <input type="radio" name="xb" id="ty"/>同意
+        </label>
+        <label for="bty" class="radio-inline">
+            <input type="radio" name="xb" id="bty"/>不同意
+        </label>
+    </p>
+    <p><label for="">批示建议：</label><textarea name="" id="" cols="34" rows="5"></textarea></p>
+    <p><button>提交</button><button>返回</button></p>
+</form>
+
+<script src="js/jquery.js"></script>
+<script>
+    //    window.onload=function(){
+    //    }
+</script>
+</body>
+</html>

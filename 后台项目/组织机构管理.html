@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css">
+    <style>
+        #tree{
+            float: left;
+            margin: 20px;
+        }
+        .div1{
+            /*border:2px solid #7e7877;*/
+            width:400px;
+            height: 500px;
+            float: left;
+            margin: 20px;
+        }
+        .div2{
+            width: 200px;
+            height: 30px;
+            line-height: 30px;
+            border:1px solid #7e7877;
+            background: #ffffff;
+        }
+        #ipt{
+            width: 200px;
+            height: 30px;
+            border: 1px solid #7e7877;
+            outline: none;
+        }
+        button{
+            width: 90px;
+            height: 30px;
+            border: none;
+            background: #93b4ff;
+            color:white;
+            font-weight: 600;
+            border-radius: 3px;
+            margin-left: 5px;
+        }
+        button:last-child{
+            margin-left: 10px;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.ztree.core.min.js"></script>
+    <script>
+        //pid -1 无父节点。
+        var datas =[{id:"0",name:"部门名称",pid:"-1",test:"abc"},
+                     {id:"1",name:"研发部门",pid:"0",test:"a1"},
+            {id:"2",name:"研发一部",pid:"1",test:"a11"},
+            {id:"3",name:"研发二部",pid:"1",test:"a12"},
+            {id:"4",name:"销售部门",pid:"0",test:"b1"},
+            {id:"5",name:"销售部门1",pid:"4",test:"b11"},
+            {id:"6",name:"销售部门2",pid:"4",test:"b12"}];
+        $(function(){
+           var setting={
+               //选择哪个数据源
+               data:{
+                   simpleData: {
+                       //是否打开树，id是什么，父id是什么 以及根id
+                       enable: true,
+                       idKey: "id",
+                       pIdKey: "pid",
+                       rootPId: -1
+                   }
+               },
+               //显示形式，是否双击，是否多行选中
+               view: {
+                   dblClickExpand: false,
+                   selectedMulti: false
+               },
+               //回调
+               callback: {
+                   onClick: function(event,treeId,treeNode){
+                       //可以通过treeNode来拿到他的名称
+                        //alert(treeNode.name);
+                       $(".div1 .div2").html(treeNode.id);
+                       $(".div1 .div22").html(treeNode.name);
+                       //$("#txt2").val(treeNode.pid);
+                       //var sss= datas[datas.length-1].id;
+
+                   }
+               }
+
+                   }
+           //开始创建一个新节点
+            var t= $.fn.zTree.init($("#tree"), setting, datas);
+
+            function move(id,name,pid){
+                var n ={id:id,name:name,pid:pid};
+                t.addNodes(t.getNodeByParam("id",parseInt(pid),null),n);
+            }
+
+
+         move("7","销售部门5","4");
+          var sss= datas[datas.length-1].id;
+            $("#btn").click(function(){
+                if($("#ipt").val()!=""){
+                    sss++
+                    var pid =$(".div1 .div2").html();
+                    var names=$("#ipt").val();
+                    move(sss,names,pid);
+
+                }
+                else{
+                    alert("请您添加数据再保存！");
+                }
+
+          });
+            function removeNodes()
+            {
+                var treeObj = $.fn.zTree.getZTreeObj("tree");
+                //选中节点
+                var nodes = treeObj.getSelectedNodes();
+                for (var i=0, l=nodes.length; i < l; i++)
+                {
+                    //删除选中的节点
+                    treeObj.removeNode(nodes[i]);
+                }
+            }
+            $("#del").click(function(){
+                removeNodes();
+
+            });
+
+
+            //$(".div1").load("测试页.html");
+        })
+    </script>
+</head>
+<body>
+<div id="tree" class="ztree"></div>
+<div class="div1">
+    <p>部门名称：</p>
+    <div class="div2" hidden></div>
+    <div class="div2 div22"></div>
+    <p>新增部门：</p>
+    <p><input type="text" value="" id="ipt" /></p>
+    <p><button>保存</button><button>删除</button></p>
+</div>
+</body>
+</html>

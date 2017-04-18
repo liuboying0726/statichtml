@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>编辑</title>
+    <link rel="stylesheet" href="css/cssnormalize-min.css"/>
+    <link rel="stylesheet" href="css/biaodan-xjyh.css"/>
+    <script src="js/jquery-3.1.0.min.js"></script>
+</head>
+<body>
+<div id="biaodan" class="biaodan">
+    <div class="m-back"></div>
+    <div class="m-inner" id="m-inner">
+        <div class="m-biaodan">
+            <h4>编辑</h4>
+
+            <div class="m-form">
+                <ul>
+                    <li>
+
+                        <label for="" >用户名：</label>
+                        <input type="text" placeholder="请输入用户名" id="yhm"/>
+                        <span id="yhmError"></span>
+                    </li>
+                    <li>
+                        <label for="" class="m-label">性别：</label>
+                        <input type="radio" name="xb" id="man" value="1"/>男
+                        <input type="radio" name="xb" id="woman" value="2"/>女
+                        <span id="xbError"></span>
+
+                    </li>
+                    <li>
+                        <label for="" class="m-label">联系方式：</label>
+                        <input type="text" placeholder="电话号码" id="lxff"/>
+                        <span id="lxffError"></span>
+                    </li>
+                    <li>
+                        <label for="" class="m-js-label m-label">角色：</label>
+                        <select name="bumen" id="role">
+                            <option value="0">-选择角色-</option>
+                            <option value="zc">总裁</option>
+                            <option value="yfbm">研发部门</option>
+                            <option value="kfbm">开发部门</option>
+                        </select>
+                        <label id="roleError" class="m-label"></label>
+                    </li>
+                    <li>
+                        <label for="" class="m-label">编号：</label>
+                        <input type="text" placeholder="编号" id="bh"/>
+                    </li>
+                    <li>
+                        <label for="" class="m-label">部门：</label>
+                        <select name="bumen" id="department">
+                            <option value="0">-选择部门-</option>
+                            <option value="zc">总裁</option>
+                            <option value="yfbm">研发部门</option>
+                            <option value="kfbm">开发部门</option>
+                        </select>
+                        <label id="departmentError" class="m-label"></label>
+                    </li>
+                    <li>
+                        <input type="submit" id="submitBn" class="m-btn" value="保存">
+                        <input type="submit" id="concelBn" class="m-btn" value="返回">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="my-close" id="my-close">&times;</div>
+    </div>
+</div>
+</body>
+</html>

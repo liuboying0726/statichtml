@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新建用户</title>
+    <link rel="stylesheet" href="css/cssnormalize-min.css"/>
+    <link rel="stylesheet" href="css/biaodan-xjyh.css"/>
+    <script src="js/jquery.js"></script>
+    <style>
+        .has-error {
+            border: 1px solid red;
+        }
+    </style>
+
+</head>
+<body>
+<div id="m-biaodan" class="m-biaodan">
+    <form class="m-form" action="xxx.php" id="form" onsubmit="return formSubmit()">
+        <div class="m-xjyh">
+            <h1 align="center">新建用户</h1>
+        </div>
+        <div class="m-yhm  clearfixed">
+            <label for="" class="m-label">用户名：</label>
+
+            <div class="m-label-hou m-yhm-div"><input type="text" id="yhm"/></div>
+        </div>
+        <div class="m-xb  clearfixed">
+            <label for="" class="m-label">性别：</label>
+
+            <div class="m-label-hou">
+                <input type="radio" name="xb" id="man"/>男
+
+                <input type="radio" name="xb" id="woman"/>女
+            </div>
+        </div>
+        <div class="m-lxfs  clearfixed">
+            <label for="" class="m-label">联系方式：</label>
+
+            <div class="m-label-hou m-lxfs-div"><input type="text" placeholder="电话号码" id="lxff"/></div>
+        </div>
+        <div class="m-js clearfixed">
+            <label for="" class="m-js-label m-label">角色：</label>
+
+            <div class="m-js-sub m-label-hou">
+                <span><input type="checkbox" name="role"/>角色1</span>
+                <span><input type="checkbox" name="role"/>角色2</span>
+                <span><input type="checkbox" name="role"/>角色1</span>
+                <span><input type="checkbox" name="role"/>角色2</span>
+                <span><input type="checkbox" name="role"/>角色1</span>
+                <span><input type="checkbox" name="role"/>角色2</span>
+                <span><input type="checkbox" name="role"/>角色1</span>
+                <span><input type="checkbox" name="role"/>角色2</span>
+            </div>
+        </div>
+        <div class="m-bh clearfixed">
+
+            <label for="" class="m-label">编号：</label>
+
+            <div class="m-label-hou">
+                <input type="text" placeholder="编号" id="bh"/>
+            </div>
+        </div>
+        <div class="m-bm clearfixed">
+            <label for="" class="m-label">部门：</label>
+
+            <div class="m-label-hou">
+                <select name="bumen" id="department">
+                    <option value="">-选择部门-</option>
+                    <option value="zc">总裁</option>
+                    <option value="yfbm">研发部门</option>
+                    <option value="kfbm">开发部门</option>
+                </select>
+            </div>
+        </div>
+        <div class="m-tj">
+            <input type="submit" class="m-btn" value="提交">
+        </div>
+    </form>
+</div>
+<script>
+
+    function formSubmit() {
+//            var yhmreg = /^([A-z]|[0-9]){6,20}$/ig;
+        var yhm = document.getElementById("yhm");
+        var man = document.getElementById("man");
+        var woman = document.getElementById("woman");
+        var lx = document.getElementById("lxff");
+//            var js = document.getElementsByClassName('m-js-sub');
+        var roles = document.getElementsByTagName("role");
+        var bh = document.getElementById('bh');
+        var bm = document.getElementById("department");
+        var bms = document.getElementsByTagName("option");
+//判断用户名
+        if (yhm.value == "") {
+            alert('用户名不能为空！');
+            yhm.value = "";
+            yhm.focus();
+            return false;
+
+        } else if (!/^[a-z0-9_-]{3,16}$/gi.test(yhm.value)) {
+            alert("格式错误，请输入！");
+            yhm.value = "";
+            yhm.focus();
+            return false;
+        }
+        //判断性别
+        if (!man.checked && !woman.checked) {
+            alert('请选择性别');
+            return false;
+        }
+        //联系方式
+        if (lx.value == "") {
+            alert('请填写您的联系方式！');
+            return false;
+        }
+        else if (!/^\d{11}$/.test(lx.value)) {
+            alert("格式错误，手机号为11位！");
+            return false;
+
+        }
+        //编号
+        if (bh.value == "") {
+            alert('请填写编号！');
+            return false;
+        }
+        //部门判断
+        for (var i = 0; i < bm.length; i++) {
+            if (bm.value == "") {
+                alert("请选择部门");
+                return false;
+            }
+        }
+        return true;
+    }
+
+</script>
+</body>
+</html>
